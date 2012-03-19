@@ -28,7 +28,7 @@ object Auth {
 
 object Blog extends Js {
   def avatar(hostname: String) = Tumblr.blog / hostname / "avatar"
-  def avatar(hostname: String, size: Int): Request = Avatar(hostname) / size.toString
+  def avatar(hostname: String, size: Int): Request = avatar(hostname) / size.toString
 
   def info(hostname: String, consumer: Consumer) = Tumblr.blog / hostname / "info" <<? Map("api_key" -> consumer.key) ># ('response ! ('blog ? obj))
 
@@ -61,7 +61,7 @@ object User {
     def product = Tumblr.user / "dashboard" << params <@ (consumer, token) ># ('response ! ('posts ? (list ! obj)))
     val limit = param("limit")_
     val offset = param("offset")_
-    val dashboardtype = param("type")_
+    val posttype = param("type")_
     val since_id = param("since_id")_
     val reblog_info = param("reblog_info")_
     val notes_info = param("notes_info")_
