@@ -1,6 +1,6 @@
 organization := "com.github.hexx"
 
-name := "Dispatch Tumblr"
+name := "dispatch-tumblr"
 
 version := "0.0.1"
 
