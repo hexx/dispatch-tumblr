@@ -48,6 +48,9 @@ object Blog extends Js {
     // Text Posts
     val title = param("title")_
     val body = param("body")_
+    // Link Posts
+    val url = param("url")_
+    val description = param("description")_
   }
 
   val title = 'title ? str
