@@ -1,15 +1,17 @@
 package com.github.hexx.dispatch.tumblr
 
+import language.postfixOps
+
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
-import dispatch._
-import dispatch.json.JsHttp._
-import dispatch.json.{ Js, JsObject }
-import dispatch.oauth.OAuth
-import dispatch.oauth.OAuth._
-import dispatch.oauth.{ Consumer, Token }
+import dispatch.classic._
+import dispatch.classic.json.JsHttp._
+import dispatch.classic.json.{ Js, JsObject }
+import dispatch.classic.oauth.OAuth
+import dispatch.classic.oauth.OAuth._
+import dispatch.classic.oauth.{ Consumer, Token }
 
 object Tumblr {
   val blog = :/("api.tumblr.com") / "v2" / "blog"

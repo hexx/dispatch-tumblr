@@ -4,12 +4,12 @@ name := "dispatch-tumblr"
 
 version := "0.0.1"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.10.1"
 
-scalacOptions += "-deprecation"
+scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
 libraryDependencies ++= Seq(
-  "net.databinder" %% "dispatch-http-json" % "0.8.8",
-  "net.databinder" %% "dispatch-oauth" % "0.8.8",
-  "org.specs2" %% "specs2" % "1.8.2" % "test"
+  "net.databinder" %% "dispatch-http-json" % "0.8.9",
+  "net.databinder" %% "dispatch-oauth" % "0.8.9",
+  "org.specs2" %% "specs2" % "1.14" % "test"
 )

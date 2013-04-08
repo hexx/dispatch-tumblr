@@ -3,10 +3,10 @@ import org.specs2.mutable._
 import com.github.hexx.dispatch.tumblr._
 
 class TumblrSpec extends Specification {
-  import dispatch._
-  import dispatch.json.Js
-  import dispatch.json.JsHttp._
-  import dispatch.oauth.{ Consumer, Token }
+  import dispatch.classic._
+  import dispatch.classic.json.Js
+  import dispatch.classic.json.JsHttp._
+  import dispatch.classic.oauth.{ Consumer, Token }
 
   val consumer = Consumer("YOUR CONSUMER KEY", "YOUR CONSUMER SECRET")
   val username = "YOUR USERNAME"
